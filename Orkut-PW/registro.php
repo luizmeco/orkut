@@ -44,7 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $target_dir = "uploads/";
                 // Gera um nome único para o arquivo para evitar sobrescrever
                 $imageFileType = strtolower(pathinfo($_FILES['foto']['name'], PATHINFO_EXTENSION));
-                $new_file_name = uniqid() . "." . $imageFileType;
+                $new_file_name = 
+                () . "." . $imageFileType;
                 $foto_destino_completo = $target_dir . $new_file_name;
 
                 // Validações adicionais para a imagem (tipo, tamanho, etc.)
