@@ -122,7 +122,7 @@ $nome_completo = $nome_completo ?? '';
         }
     </style>
 </head>
-<body>
+<body class="bg-dark text-white">
     <div class="container text-center">
         <div>
             <img style="width: 500px;" class="p-5" src="./img/orkutlogo.png" alt="Orkut Logo">

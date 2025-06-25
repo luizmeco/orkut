@@ -66,7 +66,7 @@ $result_sugestoes = $conn->query($sql_sugestoes_amizade);
     <style>
         body { background-color: #ADD8E6; }
         .custom-box {
-            background-color: #f0f0f0;
+            background-color: #343A40;
             border-radius: 15px;
             padding: 10px;
             margin: 10px;
@@ -87,25 +87,28 @@ $result_sugestoes = $conn->query($sql_sugestoes_amizade);
             border-radius: 50%;
             object-fit: cover;
         }
+        .sugestao-amigo-card{
+            background-color: #343A40;
+        }
     </style>
     <meta charset="UTF-8">
     <title>Orkut</title>
 </head>
 
-<body>
+<body class="bg-dark text-white">
 
     <div class="container">
         <div class="row text-center">
 
             <div class="col-md-3">
                 <div class="custom-box">
-                    <a href="principal.php"><img style="width: 50%;" src="./img/orkutlogo.png" alt="#"></a>
+                    <a href="principal.php"><img style="width: 50%;" src="./img/orkutlogo.png" alt="#" class="mb-3"></a>
                     <img src="uploads/<?php echo $foto; ?>" alt="Foto de perfil" style="width:150px; height:150px; border-radius: 50%; object-fit: cover;"><br>
 
                     <h3><?php echo $nome_completo; ?></h3><br>
-                    <a href="editar.php">Editar Perfil</a><br><br>
-                    <a href="addamigo.php">Adicionar Amigo</a><br><br>
-                    <a href="enviarmsg.php">Enviar Mensagem</a>
+                    <a href="./editar.php" class="btn btn-info btn-sm">Editar Perfil</a><br><br>
+                    <a href="./addamigo.php" class="btn btn-info btn-sm">Adicionar Amigo</a><br><br>
+                    <a href="./enviarmsg.php" class="btn btn-info btn-sm">Enviar Mensagem</a>
                 </div>
             </div>
 

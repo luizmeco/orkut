@@ -9,13 +9,7 @@
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 
-<style>
-    body {
-        background-color: #ADD8E6;
-    }
-</style>
-
-<body>
+<body class="bg-dark">
     <div class="container text-center">
         <div>
             <img style="width: 500px;" class="p-5" src="./img/orkutlogo.png" alt="#">

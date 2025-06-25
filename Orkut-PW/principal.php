@@ -25,7 +25,7 @@ if (isset($_GET['sucesso'])) {
     <style>
         body { background-color: #ADD8E6; }
         .custom-box {
-            background-color: #f0f0f0;
+            background-color: #343A40;
             border-radius: 15px;
             padding: 10px;
             margin: 10px;
@@ -55,20 +55,20 @@ if (isset($_GET['sucesso'])) {
     <title>Orkut</title>
 </head>
 
-<body>
+<body class="bg-dark text-white">
 
     <div class="container">
         <div class="row text-center">
 
             <div class="col-md-3">
                 <div class="custom-box">
-                    <a href="principal.php"><img style="width: 50%;" src="./img/orkutlogo.png" alt="#"></a>
+                    <a href="principal.php"><img style="width: 50%;" src="./img/orkutlogo.png" alt="#" class="mb-3"></a>
                     <img src="uploads/<?php echo $foto;?>" alt="Foto de perfil" style="width:150px; height:150px; border-radius: 50%; object-fit: cover;"><br>
 
                     <h3><?php echo $nome_completo; ?></h3><br>
-                    <a href="./editar.php">Editar Perfil</a><br><br>
-                    <a href="./addamigo.php">Adicionar Amigo</a><br><br>
-                    <a href="enviarmsg.php">Enviar Mensagem</a><br><br>
+                    <a href="./editar.php" class="btn btn-info btn-sm">Editar Perfil</a><br><br>
+                    <a href="./addamigo.php" class="btn btn-info btn-sm">Adicionar Amigo</a><br><br>
+                    <a href="enviarmsg.php" class="btn btn-info btn-sm">Enviar Mensagem</a><br><br>
                     
                     <a href="logout.php" class="btn btn-danger btn-sm mt-2">Sair / Deslogar</a>
                 </div>
@@ -150,12 +150,12 @@ if ($result_mensagens->num_rows > 0) {
                             $solicitante_username = $row_pendente['solicitante_username'];
                             $solicitante_foto = "uploads/" . $row_pendente['solicitante_foto'];
                             ?>
-                            <div class="pending-friend-card">
+                            <div class="pending-friend-card bg-secondary">
                                 <img src="<?php echo $solicitante_foto; ?>" alt="Foto de <?php echo $solicitante_username; ?>">
                                 <span><?php echo $solicitante_username; ?></span>
                                 <form action="processa_aceite_amizade.php" method="post">
                                     <input type="hidden" name="amizade_id" value="<?php echo $amizade_id; ?>">
-                                    <button type="submit" class="btn btn-success btn-sm">Aceitar</button>
+                                    <button type="submit" class="btn btn-success btn-sm ms-2">Aceitar</button>
                                 </form>
                             </div>
                             <?php
@@ -193,7 +193,7 @@ if ($result_mensagens->num_rows > 0) {
                             $amigo_username = $row_amigo['amigo_username'];
                             $amigo_foto = "uploads/" . $row_amigo['amigo_foto'];
                             ?>
-                            <div class="friend-card">
+                            <div class="friend-card bg-secondary">
                                 <img src="<?php echo $amigo_foto; ?>" alt="<?php echo $amigo_username; ?>'s photo">
                                 <span><?php echo $amigo_username; ?></span>
                             </div>

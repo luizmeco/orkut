@@ -15,7 +15,7 @@ include_once 'include/selectUsuario.php';
         }
 
         .custom-box {
-            background-color: #f0f0f0;
+            background-color: #343A40;
             /* Cor de fundo */
             border-radius: 15px;
             /* Bordas arredondadas */
@@ -24,12 +24,16 @@ include_once 'include/selectUsuario.php';
             margin: 10px;
             /* Espaçamento externo entre as colunas */
         }
-    </style>
+        input{
+            background-color: #6C757D !important;
+            color: white !important;
+        }
+        </style>
     <meta charset="UTF-8">
     <title>Orkut</title>
 </head>
 
-<body>
+<body class="bg-dark text-white">
 
     <div class="container">
         <div class="row text-center">
@@ -37,13 +41,13 @@ include_once 'include/selectUsuario.php';
             <!-- Coluna 01 -->
             <div class="col-md-3">
                 <div class="custom-box">
-                    <a href="principal.php"><img style="width: 50%;" src="./img/orkutlogo.png" alt="#"></a>
+                    <a href="principal.php"><img style="width: 50%;" src="./img/orkutlogo.png" alt="#" class="mb-3"></a>
                     <img src="uploads/<?php echo $foto; ?>" alt="Foto de perfil" style="width:150px;"><br>
 
                     <h3><?php echo $nome_completo; ?></h3><br>
-                    <a href="x">Editar Perfil</a><br><br>
-                    <a href="./addamigo.php">Adicionar Amigo</a><br><br>
-                    <a href="">Enviar Mensagem</a>
+                    <a href="./editar.php" class="btn btn-info btn-sm">Editar Perfil</a><br><br>
+                    <a href="./addamigo.php" class="btn btn-info btn-sm">Adicionar Amigo</a><br><br>
+                    <a href="./enviarmsg.php" class="btn btn-info btn-sm">Enviar Mensagem</a>
                 </div>
             </div>
 

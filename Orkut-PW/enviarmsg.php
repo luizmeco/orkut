@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
 
         .custom-box {
-            background-color: #f0f0f0;
+            background-color: #343A40;
             /* Cor de fundo */
             border-radius: 15px;
             /* Bordas arredondadas */
@@ -42,12 +42,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             margin: 10px;
             /* Espaçamento externo entre as colunas */
         }
+        select, textarea{
+            background-color: #6C757D !important;
+            color: white !important;
+        }
     </style>
     <meta charset="UTF-8">
     <title>Orkut</title>
 </head>
 
-<body>
+<body class="bg-dark text-white">
 
     <div class="container">
         <div class="row text-center">
@@ -59,9 +63,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <img src="uploads/<?php echo $foto; ?>" alt="Foto de perfil" style="width:150px;"><br>
 
                     <h3><?php echo $nome_completo; ?></h3><br>
-                    <a href="x">Editar Perfil</a><br><br>
-                    <a href="./addamigo.php">Adicionar Amigo</a><br><br>
-                    <a href="">Enviar Mensagem</a>
+                    <a href="./editar.php" class="btn btn-info btn-sm">Editar Perfil</a><br><br>
+                    <a href="./addamigo.php" class="btn btn-info btn-sm">Adicionar Amigo</a><br><br>
+                    <a href="./enviarmsg.php" class="btn btn-info btn-sm">Enviar Mensagem</a>
                 </div>
             </div>
 
